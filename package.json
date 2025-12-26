@@ -7,8 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "electron": "electron ../electron-desktop/main.js",
-    "electron:dev": "concurrently \"npm run web\" \"wait-on http://localhost:19006 && electron ../electron-desktop/main.js\"",
+    "electron": "electron electron-desktop/main.js",
+    "electron:dev": "concurrently \"npm run web\" \"wait-on http://localhost:19006 && electron electron-desktop/main.js\"",
     "build:web": "cross-env NODE_OPTIONS=--max_old_space_size=4096 expo export:web",
     "electron:build:win": "npm run build:web && electron-builder --win"
   },
@@ -44,5 +44,23 @@
     "electron-builder": "^24.13.3",
     "wait-on": "^7.2.0"
   },
-  "private": true
+  "private": true,
+  "build": {
+    "appId": "com.siphamandla10.deliverpointpos",
+    "productName": "Deliver Point POS",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron-desktop/**/*",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "main": "electron-desktop/main.js"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    }
+  }
 }
