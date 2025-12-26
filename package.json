@@ -48,6 +48,7 @@
   "build": {
     "appId": "com.siphamandla10.deliverpointpos",
     "productName": "Deliver Point POS",
+    "publish": null,
     "directories": {
       "output": "dist"
     },
