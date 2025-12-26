@@ -1,0 +1,24 @@
+﻿{
+  "expo": {
+    "name": "Deliver Point POS",
+    "slug": "deliver-point-frontend",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "platforms": ["android", "web"],
+    "android": {
+      "package": "com.siphamandla10.deliverpointfrontend",
+      "versionCode": 3,
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d7139f29-36e9-46db-a87a-0248c3cddb48"
+      }
+    },
+    "owner": "siphamandla-10"
+  }
+}
